@@ -1,0 +1,19 @@
+@import '../../theme/config';
+
+form {
+  box-shadow: 0 0 4px 0 rgba($second_color, 0.5);
+  padding: 24px;
+  border-radius: 4px;
+  width: 100%;
+  background-color: #eee;
+
+  h3 {
+    color: $first_color;
+    margin-bottom: $gap;
+    text-align: center;
+  }
+
+  mat-form-field {
+    width: 100%;
+  }
+}

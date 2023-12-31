@@ -1,1 +1,136 @@
-<p>home works!</p>
+<section id="hero">
+  <div class="inner-container">
+    <div class="details">
+      <p class="hi">Hello, my name is </p>
+      <h1>Redouane Bekkouche</h1>
+      <p class="js-ts">I'm a web developer</p>
+      <div class="btns">
+        <a type="button" mat-raised-button color="accent" href="#contact">
+          Contact
+        </a>
+        <a type="button" mat-raised-button color="accent"
+          href="../../../assets/Redouane-Bekkouche-CV.pdf" download>
+          Download CV
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<section id="about">
+  <div class="inner-container">
+    <div class="photo">
+      <img 
+        ngSrc="../../../assets/Redouane Bekkouche.webp" alt="Redouane Bekkouche's personal photo"
+        width="400" height="400" priority class="img">
+    </div>
+    
+    <div class="details">
+      <div class="inner">
+        <h2>About me</h2>
+        <p>I'm a self-taught web developer, with strong problem-solving skills and a keen eye for design. I am confident in my ability to create engaging, responsive web applications, and looking to apply my skills and contribute to innovative projects.</p>
+        <app-tabs [tabs]="[
+          {title: 'Skills', template: skills}, 
+          {title: 'Education', template: education},
+          {title: 'Languages', template: languages},
+        ]"></app-tabs>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="inner-container">
+    <div class="details">
+      <div class="inner">
+        <h2>Let's Connect</h2>
+        <p>I'm currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+        <div class="email">
+          <img ngSrc="../../../assets/envelope.svg" width="24" height="24" class="icon" alt="">
+          <span>redouane.bekk&#64;gmail.com</span>
+          <button [cdkCopyToClipboard]="'redouane.bekk@gmail.com'" type="button" class="copy-btn" 
+            title="Copy Email adresse" (click)="openSnackBar('Email adresse copied')">
+            <img src="../../../assets/content_copy_icon.svg" width="24px" alt="">
+          </button>
+        </div>
+        <div class="phone">
+          <div class="icons">
+            <img ngSrc="../../../assets/phone.svg" width="24" height="24" class="icon" alt="Phone icon"> | 
+            <img ngSrc="../../../assets/telegram.svg" width="24" height="24" class="icon" alt="Telegram icon"> | 
+            <img ngSrc="../../../assets/whatsapp.svg" width="24" height="24" class="icon" alt="WhatsApp icon">
+          </div>
+          <span>+213 790 04 66 00</span>
+          <button [cdkCopyToClipboard]="'+213790046600'" type="button" class="copy-btn" 
+            title="Copy phone number" (click)="openSnackBar('Phone number copied')">
+            <img src="../../../assets/content_copy_icon.svg" width="24px" alt="">
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="form">
+      <app-contact-form></app-contact-form>
+    </div>
+  </div>
+</section>
+
+<!-- 
+  tabs content
+ -->
+
+<ng-template #skills>
+  <div class="tab-content">
+    While problem-solving is my core strength, I've also had a diverse skill set through my tech journey
+    <div class="skills">
+      <span class="skill">
+        <img ngSrc="../../../assets/html5-original.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">HTML</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/css3-plain-wordmark.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">CSS</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/javascript-original.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">Javascript</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/typescript.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">Typescript</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/angular.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">Angular</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/git-plain.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">GIT</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/wordpress.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">Wordpress</small>
+      </span>
+      <span class="skill">
+        <img ngSrc="../../../assets/google-sheets-logo-icon.svg" width="72" height="72" alt="HTML 5 logo">
+        <small class="skill-label">Google Sheets</small>
+      </span>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #education>
+  <div class="tab-content">
+    Farhat Abbas Setif University, Algeria, 2016 / 2017 <br>
+    - Field of study: Optics and Mechanics <small>(No degree)</small>
+  </div>
+</ng-template>
+
+<ng-template #languages>
+  <div class="tab-content">
+    <ul>
+      <li>Arabic <small>(Excellent)</small></li>
+      <li>English <small>(Conversational)</small></li>
+      <li>French <small>(Beginner)</small></li>
+    </ul>
+  </div>
+</ng-template>

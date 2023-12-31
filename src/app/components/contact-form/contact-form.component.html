@@ -1,0 +1,36 @@
+<form class="example-form" (submit)="sendMessage($event)"> 
+  <h3> Send me a message!</h3>
+
+  <mat-form-field class="form-control">
+    <mat-label for="name">Full name</mat-label>
+    <input matInput type="text" id="name" name="name" 
+      [(ngModel)]="formValues.name" required>
+  </mat-form-field><br>
+
+  <mat-form-field class="form-control" color="primary">
+    <mat-label for="email">Email</mat-label>
+    <input matInput type="email" id="email" name="email"
+      [(ngModel)]="formValues.email" required>
+  </mat-form-field><br>
+
+  <mat-form-field class="form-control">
+    <mat-label for="message">Message</mat-label>
+    <textarea matInput type="message" id="message" name="message" rows="5"
+      [(ngModel)]="formValues.message" required>
+    </textarea>
+  </mat-form-field><br>
+
+  <div class="submit-container">
+    <button  type="submit" mat-raised-button color="accent" class="full-width">
+      Send
+    </button>
+  </div>
+
+  @if (alert && alert.show) {
+    <app-notification
+      [type]="alert.type" 
+      [content]="alert.content"
+      (close)="alert.show = false">
+    </app-notification>
+  }
+</form>

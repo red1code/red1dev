@@ -11,9 +11,4 @@ export const routes: Routes = [
     title: 'Redouane Bekkouche - Portfolio',
     loadComponent: () => import('./pages/portfolio/portfolio.component').then(mod => mod.PortfolioComponent)
   },
-  {
-    path: 'contact',
-    title: 'Redouane Bekkouche - Contact',
-    loadComponent: () => import('./pages/contact/contact.component').then(mod => mod.ContactComponent)
-  },
 ];

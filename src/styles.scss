@@ -2,6 +2,7 @@
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
 @use './app/theme/palettes' as custom;
+@use './app/theme/config' as config;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -34,15 +35,44 @@ $portfolio-theme: mat.define-light-theme((color: (primary: $portfolio-primary,
 
 html,
 body {
+  scroll-behavior: smooth;
   height: 100%;
 }
 
-body {
+* {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "ubuntu", "Helvetica Neue", sans-serif;
+  height: fit-content;
 }
 
 a {
   text-decoration: none;
   color: inherit;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+  color: inherit;
+}
+
+.img {
+  width: 100%;
+  height: auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.inner-container {
+  max-width: 1200px;
+  padding: 0 config.$gap;
+  margin-inline: auto;
 }

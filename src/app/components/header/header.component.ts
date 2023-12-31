@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { AsyncPipe } from '@angular/common';
+import { AsyncPipe, CommonModule } from '@angular/common';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -15,24 +15,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [
-    MatToolbarModule,
-    MatButtonModule,
-    MatSidenavModule,
-    MatListModule,
-    MatIconModule,
-    AsyncPipe,
-    MatToolbarModule,
-    RouterLink,
-    RouterLinkActive,
-  ]
+  imports: [CommonModule, RouterLink, RouterLinkActive, MatIconModule]
 })
 export class HeaderComponent {
-  private breakpointObserver = inject(BreakpointObserver);
 
-  isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
-    .pipe(
-      map(result => result.matches),
-      shareReplay()
-    );
+  showMobileMenu = false;
+
+  toggleMobileMenuImg = () => this.showMobileMenu
+    ? '/assets/close-menu.svg'
+    : '/assets/align-justify.svg';
+
 }

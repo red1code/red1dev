@@ -1,0 +1,38 @@
+.notification-container {
+  padding: 16px;
+  border-radius: 4px;
+  opacity: 0.95;
+
+  button.close {
+    all: unset;
+    float: right;
+    font-size: 1.55rem;
+    font-weight: bolder;
+    line-height: 0.5;
+    cursor: pointer;
+
+    &:hover {
+      color: #000;
+    }
+  }
+}
+
+.info {
+  background-color: skyblue;
+  color: #2e2e2e;
+}
+
+.success {
+  background-color: lightgreen;
+  color: #2e2e2e;
+}
+
+.danger {
+  background-color: orange;
+  color: #2e2e2e;
+}
+
+.error {
+  background-color: firebrick;
+  color: #fff;
+}

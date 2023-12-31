@@ -1,39 +1,124 @@
 @import '../../theme/config';
 
-// .sidenav-container {
-//   height: 100%;
-// }
-
-.sidenav {
-  min-width: 200px;
+button {
+  all: unset;
+  cursor: pointer;
 }
 
-// .sidenav .mat-toolbar {
-//   background: inherit;
-// }
-
-.mat-toolbar.mat-primary {
+header {
+  height: 56px;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
-  z-index: 1;
-}
+  background-color: rgba($third_color, 0.9);
+  box-shadow: 0 0 3px 0 $first_color;
+  -webkit-box-shadow: 0 0 3px 0 $first_color;
+  -moz-box-shadow: 0 0 3px 0 $first_color;
+  z-index: 100;
 
-mat-toolbar {
-  justify-content: space-between;
+  .inner-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
 
-  a {
-    margin-left: $gap;
 
-    &:hover {
-      color: #9c2626;
+    .social-links {
+      display: flex;
+      gap: calc($gap / 2);
+
+      img {
+        height: 100%;
+        opacity: 0.8;
+
+        &:hover {
+          opacity: 1;
+          transition: 0.3s;
+        }
+      }
+    }
+
+    nav {
+      ul {
+        float: right;
+        display: flex;
+        gap: $gap;
+
+        li {
+          font-weight: 500;
+        }
+
+        li:hover {
+          color: $forth_color;
+        }
+      }
+    }
+
+    button {
+      padding: 0;
+      display: none;
+      opacity: 0.9;
+
+      &:hover {
+        opacity: 1;
+        filter: brightness(0.5);
+        transition: 0.3s;
+      }
     }
   }
 }
 
-a {
-  font-weight: 500;
+#mobileMenu {
+  position: fixed;
+  top: 56px;
+  width: 100%;
+  padding: $gap;
+  background-color: rgba($second_color, 0.9);
+  box-shadow: 0 0 1px 0 $first_color;
+  -webkit-box-shadow: 0 0 1px 0 $first_color;
+  -moz-box-shadow: 0 0 1px 0 $first_color;
+  z-index: 90;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: $gap;
+    font-weight: 500;
+    color: $first_color;
+
+    li:hover {
+      color: $forth_color;
+      transition: 0.3s;
+    }
+  }
 }
 
 .active {
-  color: $accent_color;
+  color: $forth_color;
+}
+
+.show-mobile-menu {
+  transform: scaleY(1);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+.hide-mobile-menu {
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.3s ease;
+}
+
+/*
+** responsive styles
+*/
+
+@media screen and (max-width: 600px) {
+  #desktopMenu {
+    display: none;
+  }
+
+  #toggleMenuBtn {
+    display: block;
+  }
 }

@@ -1,4 +1,44 @@
-<mat-sidenav-container class="sidenav-container">
+<header>
+  <div class="inner-container">
+    <div class="social-links">
+      <a href="https://github.com/red1code" target="_blank">
+        <img src="../../../assets/github.svg" width="20" height="20" alt="Github icon">
+      </a>
+      <a href="https://www.linkedin.com/in/redouane-bekkouche/" target="_blank">
+        <img src="../../../assets/LinkedIn_icon.svg" width="20" height="20" alt="LinkedIn icon">
+      </a>
+      <a href="https://twitter.com/red1dev" target="_blank">
+        <img src="../../../assets/X-icon.svg" width="20" height="20" alt="X (Twitter) icon">
+      </a>
+    </div>
+    <nav id="desktopMenu">
+      <ul>
+        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
+        <li><a routerLink="portfolio" routerLinkActive="active">Portfolio</a></li>
+      </ul>
+    </nav>
+    <button type="button" id="toggleMenuBtn" (click)="showMobileMenu=!showMobileMenu">
+      @if (showMobileMenu) {
+        <img src="../../../assets/close-menu.svg" width="16" height="16" alt="Close menu icon">
+      }
+      @else if (!showMobileMenu) {
+        <img src="../../../assets/align-justify.svg" width="20" height="20" alt="Open menu icon">
+      }
+    </button>
+  </div>
+</header>
+
+<nav id="mobileMenu" class="hide-mobile-menu" 
+    [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
+  <ul>
+    <li><a routerLink="/">Home</a></li>
+    <li><a routerLink="portfolio">Portfolio</a></li>
+  </ul>
+</nav>
+
+
+
+<!-- <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer class="sidenav" fixedInViewport
         [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
         [mode]="'over'"
@@ -9,34 +49,32 @@
           (click)="drawer.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
-    <mat-toolbar>Red1Dev</mat-toolbar>
     <mat-nav-list>
-      <a mat-list-item routerLink="/" routerLinkActive="active">Home</a>
+      <a mat-list-item routerLink="/#hero" routerLinkActive="active">Home</a>
       <a mat-list-item routerLink="/portfolio" routerLinkActive="active">Portfolio</a>
-      <a mat-list-item routerLink="/contact" routerLinkActive="active">Contact</a>
     </mat-nav-list>
   </mat-sidenav>
 
   <mat-sidenav-content>
-    <mat-toolbar color="primary">
-      @if (isHandset$ | async) {
-        <button
-          type="button"
-          aria-label="Toggle sidenav"
-          mat-icon-button
-          (click)="drawer.toggle()">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-      }
-      <span>Red1Dev</span>
-      @if (!(isHandset$ | async)) {
-        <nav>
-          <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
-          <a routerLink="/portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Portfolio</a>
-          <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Contact</a>
-        </nav>
-      }
+    <mat-toolbar class="main-hdr mat-elevation-z8" color="primary">
+      <div class="inner-container">
+        @if (isHandset$ | async) {
+          <button
+            type="button"
+            aria-label="Toggle sidenav"
+            mat-icon-button
+            (click)="drawer.toggle()">
+            <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          </button>
+        }
+        <span>Red1Dev</span>
+        @if (!(isHandset$ | async)) {
+          <nav>
+            <a routerLink="/">Home</a>
+            <a routerLink="/portfolio">Portfolio</a>
+          </nav>
+        }
+      </div>
     </mat-toolbar>
-    <!-- Add Content Here -->
   </mat-sidenav-content>
-</mat-sidenav-container>
+</mat-sidenav-container> -->

@@ -1,0 +1,10 @@
+<div class="notification-container" 
+  [ngClass]="{
+    'info': type === 'Info',
+    'success': type === 'Success',
+    'danger': type === 'Danger',
+    'error': type === 'Error'
+  }">
+  <button class="close" type="button" (click)="close.emit()">&#215;</button>
+  <span class="content">{{ content }}</span>
+</div>

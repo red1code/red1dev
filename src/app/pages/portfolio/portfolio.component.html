@@ -1,1 +1,35 @@
-<p>portfolio works!</p>
+<div class="portfolio-container">
+  <div class="hdr">    
+    <h1>My Digital Creations</h1>
+    <p>There's a unique serenity in coding, where thoughts merge with lines of code, crafting a symphony of creation.</p>
+  </div>
+  <app-tabs
+    [tabs]="[
+      {title: 'Websites', template: websites},
+      {title: 'Web Apps', template: webApps},
+      {title: 'Browser Games', template: browserGames},
+    ]">
+  </app-tabs>
+</div>
+
+<!-- 
+Websites tab content
+-->
+<ng-template matTabContent #websites>
+  <app-projects-template [projects]="websiteProjects"></app-projects-template>
+</ng-template>
+
+
+<!-- 
+Web Apps tab content
+-->
+<ng-template matTabContent #webApps>
+  <app-projects-template [projects]="webAppsProjects"></app-projects-template>
+</ng-template>
+
+<!-- 
+Browser Games tab content
+-->
+<ng-template matTabContent #browserGames>
+  <app-projects-template [projects]="browserGamesProjects"></app-projects-template>
+</ng-template>

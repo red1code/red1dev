@@ -2,28 +2,15 @@
 
 footer {
   height: 56px;
-  background-color: $third_color;
+  background-color: $primary_color;
+  color: #000;
+  font-size: 0.9rem;
+  text-align: center;
 
   .inner-container {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .content {
-      font-size: 0.9rem;
-
-      .heart-symbole {
-        font-weight: bold;
-        color: $forth_color;
-      }
-
-      a {
-        &:hover {
-          color: $forth_color;
-          transition: 0.3s;
-        }
-      }
-    }
   }
 }

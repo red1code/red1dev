@@ -1,4 +1,5 @@
 import { Routes } from '@angular/router';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 export const routes: Routes = [
   {
@@ -11,4 +12,12 @@ export const routes: Routes = [
     title: 'Redouane Bekkouche - Portfolio',
     loadComponent: () => import('./pages/portfolio/portfolio.component').then(mod => mod.PortfolioComponent)
   },
+  {
+    path: 'home',
+    redirectTo: ''
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  }
 ];

@@ -1,0 +1,41 @@
+@import '../../theme/config';
+
+.container {
+  min-height: calc(100dvh - 112px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  .inner-container {
+    display: grid;
+    gap: 24px;
+
+    h1 {
+      font-size: 11rem;
+      color: $primary_color;
+    }
+
+    h2 {
+      color: $title_dark;
+    }
+
+    p {
+      color: $txt_dark;
+    }
+  }
+}
+
+/*
+** mobile responsiveness
+*/
+
+@media only screen and (max-width: 500px) {
+  .container {
+    .inner-container {
+      h1 {
+        font-size: 7rem;
+      }
+    }
+  }
+}

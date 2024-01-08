@@ -17,5 +17,6 @@ interface Tab {
 export class TabsComponent {
 
   @Input() tabs!: Tab[];
+  @Input() bgColor: 'primary' | 'accent' | 'warn' = 'accent';
 
 }

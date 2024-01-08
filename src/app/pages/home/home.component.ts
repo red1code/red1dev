@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgOptimizedImage } from '@angular/common'
+import { NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { TabsComponent } from '../../components/tabs/tabs.component';
 import { ContactFormComponent } from '../../components/contact-form/contact-form.component';

@@ -3,14 +3,14 @@
     <div class="details">
       <p class="hi">Hello, my name is </p>
       <h1>Redouane Bekkouche</h1>
-      <p class="js-ts">I'm a web developer</p>
+      <p class="js-ts">I'm a front-end web developer</p>
       <div class="btns">
-        <a type="button" mat-raised-button color="accent" href="#contact">
-          Contact
-        </a>
-        <a type="button" mat-raised-button color="accent"
+        <a type="button" mat-raised-button color="primary" id="downloadBtn"
           href="../../../assets/Redouane-Bekkouche-CV.pdf" download>
           Download CV
+        </a>
+        <a type="button" mat-flat-button href="#contact">
+          Contact
         </a>
       </div>
     </div>
@@ -28,8 +28,13 @@
     <div class="details">
       <div class="inner">
         <h2>About me</h2>
-        <p>I'm a self-taught web developer, with strong problem-solving skills and a keen eye for design. I am confident in my ability to create engaging, responsive web applications, and looking to apply my skills and contribute to innovative projects.</p>
-        <app-tabs [tabs]="[
+        <p>I'm a passionate front-end web developer, I use my expertise in Javascript and Angular to craft engaging and responsive web applications. <br>
+        I honed my skills by tackling many challenges and by following 
+        <a href="https://www.theodinproject.com/" target="_blank" class="link">The Odin Project</a> curriculum. <br>
+        Now, I'm eagerly seeking my first developer position or internship to contribute my technical savvy to innovative projects. I'm confident in my ability to learn quickly, collaborate effectively, and deliver high-quality code. <br>
+        Curently I'm learning back-end developement with NodeJS, and interrested in mobile developement. <br>
+        Let's build something amazing together!</p>
+        <app-tabs [bgColor]="'accent'" [tabs]="[
           {title: 'Skills', template: skills}, 
           {title: 'Education', template: education},
           {title: 'Languages', template: languages},
@@ -57,7 +62,7 @@
           <div class="icons">
             <img ngSrc="../../../assets/phone.svg" width="24" height="24" class="icon" alt="Phone icon"> | 
             <img ngSrc="../../../assets/telegram.svg" width="24" height="24" class="icon" alt="Telegram icon"> | 
-            <img ngSrc="../../../assets/whatsapp.svg" width="24" height="24" class="icon" alt="WhatsApp icon">
+            <img ngSrc="../../../assets/whatsapp-square.svg" width="24" height="24" class="icon" alt="WhatsApp icon">
           </div>
           <span>+213 790 04 66 00</span>
           <button [cdkCopyToClipboard]="'+213790046600'" type="button" class="copy-btn" 
@@ -83,35 +88,57 @@
     While problem-solving is my core strength, I've also had a diverse skill set through my tech journey
     <div class="skills">
       <span class="skill">
-        <img ngSrc="../../../assets/html5-original.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/html5-original.svg" fill alt="HTML logo">
+        </div>
         <small class="skill-label">HTML</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/css3-plain-wordmark.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/css3-plain-wordmark.svg" fill alt="CSS logo">
+        </div>
         <small class="skill-label">CSS</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/javascript-original.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/javascript-original.svg" fill alt="Javascriptlogo">
+        </div>
         <small class="skill-label">Javascript</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/typescript.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/typescript.svg" fill alt="Typescript logo">
+        </div>
         <small class="skill-label">Typescript</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/angular.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/angular.svg" fill alt="Angular logo">
+        </div>
         <small class="skill-label">Angular</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/git-plain.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/git-plain.svg" fill alt="GIT logo">
+        </div>
         <small class="skill-label">GIT</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/wordpress.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/firebase-icon.svg" fill alt="Firebase logo">
+        </div>
+        <small class="skill-label">Firebase</small>
+      </span>
+      <span class="skill">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/wordpress.svg" fill alt="Wordpress logo">
+        </div>
         <small class="skill-label">Wordpress</small>
       </span>
       <span class="skill">
-        <img ngSrc="../../../assets/google-sheets-logo-icon.svg" width="72" height="72" alt="HTML 5 logo">
+        <div class="skill-img-container">
+          <img ngSrc="../../../assets/google-sheets-logo-icon.svg" fill alt="Google Sheets logo">
+        </div>
         <small class="skill-label">Google Sheets</small>
       </span>
     </div>
@@ -120,17 +147,17 @@
 
 <ng-template #education>
   <div class="tab-content">
-    Farhat Abbas Setif University, Algeria, 2016 / 2017 <br>
-    - Field of study: Optics and Mechanics <small>(No degree)</small>
+    - <b>University: </b> Farhat Abbas Setif University. Algeria. 2016 / 2017 <br>
+    - <b>Field of study:</b> Optics and Mechanics <small>(No degree)</small>
   </div>
 </ng-template>
 
 <ng-template #languages>
   <div class="tab-content">
     <ul>
-      <li>Arabic <small>(Excellent)</small></li>
-      <li>English <small>(Conversational)</small></li>
-      <li>French <small>(Beginner)</small></li>
+      <li><span>Arabic <small>(Excellent)</small></span></li>
+      <li><span>English <small>(Conversational)</small></span></li>
+      <li><span>French <small>(Beginner)</small></span></li>
     </ul>
   </div>
 </ng-template>

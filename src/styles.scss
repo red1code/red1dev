@@ -76,3 +76,13 @@ li {
   padding: 0 config.$gap;
   margin-inline: auto;
 }
+
+.link {
+  font-weight: bold;
+  font-style: italic;
+
+  &:hover {
+    color: config.$accent_color;
+    transition: 0.3s;
+  }
+}

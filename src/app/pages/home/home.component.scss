@@ -1,7 +1,7 @@
-@use '../../theme/config' as config;
+@import '../../theme/config';
 
 section {
-  padding: calc(config.$gap * 3) 0;
+  padding: calc($gap * 3) 0;
 
   h2 {
     font-size: 2rem;
@@ -16,13 +16,13 @@ section {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: calc(config.$gap * 2);
+    gap: calc($gap * 2);
   }
 }
 
 #hero {
-  color: config.$light;
-  background: linear-gradient(to right, rgba(config.$first_color, 1), rgba(config.$first_color, 0.7)),
+  color: $txt_light;
+  background: linear-gradient(to right, rgba($bg_dark, 0.95), rgba($bg_dark, 0.75)),
     url(../../../assets/red1dev-hero-bg.webp);
   background-repeat: no-repeat;
   background-size: cover;
@@ -41,18 +41,26 @@ section {
 
     h1 {
       font-size: 3rem;
-      margin: calc(config.$gap / 3) 0;
+      color: $title_light;
+      margin: calc($gap / 3) 0;
     }
 
     .btns {
-      margin-top: calc(config.$gap * 1.5);
+      margin-top: calc($gap * 1.5);
       display: flex;
-      gap: config.$gap;
+      gap: $gap;
       align-items: center;
       flex-wrap: wrap;
 
       a {
         font-weight: 500;
+      }
+
+      #downloadBtn {
+        &:hover {
+          color: $accent_color;
+          transition: 0.3s;
+        }
       }
     }
   }
@@ -67,9 +75,6 @@ section {
 }
 
 #about {
-  color: config.$first_color;
-  background-color: config.$light;
-
   .inner-container {
     &>* {
       min-width: 255px;
@@ -77,9 +82,14 @@ section {
 
     .details {
       flex: 1.5;
+      color: $txt_dark;
+
+      h2 {
+        color: $title_dark;
+      }
 
       p {
-        margin: calc(config.$gap * 1) 0;
+        margin: calc($gap * 1) 0;
       }
     }
 
@@ -94,8 +104,7 @@ section {
 }
 
 #contact {
-  color: config.$light;
-  background-color: config.$first_color;
+  background-color: $bg_dark;
 
   .inner-container {
     .form {
@@ -105,14 +114,15 @@ section {
 
     .details {
       flex: 1.5;
+      color: $txt_light;
 
       .inner {
         h2 {
-          color: config.$second_color;
+          color: $title_light;
         }
 
         p {
-          margin: calc(config.$gap) 0;
+          margin: calc($gap) 0;
         }
 
         .email,
@@ -152,19 +162,30 @@ section {
 }
 
 .tab-content {
-  padding: calc(config.$gap / 2);
+  padding: calc($gap / 2);
 
   .skills {
     margin-top: 16px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(72px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, 72px);
+    gap: calc($gap / 2);
     text-align: center;
 
     .skill {
+      height: fit-content;
+
       &:hover small {
         opacity: 1;
         transition: 0.3s;
+      }
+
+      .skill-img-container {
+        position: relative;
+        height: 72px;
+
+        img {
+          object-fit: contain;
+        }
       }
 
       small {
@@ -179,6 +200,11 @@ section {
 
     li {
       list-style: circle;
+      color: $primary_color;
+
+      span {
+        color: $txt_dark;
+      }
     }
   }
 }

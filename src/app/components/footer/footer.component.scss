@@ -3,7 +3,7 @@
 footer {
   height: 56px;
   background-color: $primary_color;
-  color: #000;
+  color: $title_dark;
   font-size: 0.9rem;
   text-align: center;
 
@@ -12,5 +12,17 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+
+    .content {
+      line-height: 1.3rem;
+
+      #copyright {
+        white-space: nowrap;
+
+        i {
+          color: #000;
+        }
+      }
+    }
   }
 }

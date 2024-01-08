@@ -57,9 +57,28 @@ section {
       }
 
       #downloadBtn {
+        background: linear-gradient(to right, $accent_color 50%, $primary_color 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.5s ease-out;
+
         &:hover {
-          color: $accent_color;
-          transition: 0.3s;
+          background-position: left bottom;
+          color: #fff;
+        }
+      }
+
+      #contactBtn {
+        border: 3px solid $primary_color;
+        color: $primary_color;
+        background: linear-gradient(to right, $primary_color 50%, rgba($primary_color, 0) 50%);
+        background-size: 200% 100%;
+        background-position: right bottom;
+        transition: all 0.5s ease-out;
+
+        &:hover {
+          color: #000000;
+          background-position: left bottom;
         }
       }
     }
@@ -200,10 +219,10 @@ section {
 
     li {
       list-style: circle;
-      color: $primary_color;
 
-      span {
-        color: $txt_dark;
+      &::marker {
+        font-size: 20px;
+        color: $accent_color;
       }
     }
   }

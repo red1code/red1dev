@@ -30,7 +30,7 @@ header {
 
       img {
         height: 100%;
-        opacity: 0.8;
+        opacity: 0.75;
 
         &:hover {
           opacity: 1;
@@ -50,7 +50,7 @@ header {
         }
 
         li:hover {
-          color: $accent_color;
+          color: #000000;
         }
       }
     }
@@ -87,14 +87,14 @@ header {
     color: $title_dark;
 
     li:hover {
-      color: $accent_color;
+      color: #000000;
       transition: 0.3s;
     }
   }
 }
 
 .active {
-  color: $accent_color;
+  color: #000000;
 }
 
 .show-mobile-menu {

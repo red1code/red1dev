@@ -13,8 +13,16 @@
     </div>
     <nav id="desktopMenu">
       <ul>
-        <li><a routerLink="/" routerLinkActive="active">Home</a></li>
-        <li><a routerLink="portfolio" routerLinkActive="active">Portfolio</a></li>
+        <li>
+          <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Home
+          </a>
+        </li>
+        <li>
+          <a routerLink="portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+            Portfolio
+          </a>
+        </li>
       </ul>
     </nav>
     <button type="button" id="toggleMenuBtn" (click)="showMobileMenu=!showMobileMenu">
@@ -31,8 +39,16 @@
 <nav id="mobileMenu" class="hide-mobile-menu" 
     [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
   <ul>
-    <li><a routerLink="/">Home</a></li>
-    <li><a routerLink="portfolio">Portfolio</a></li>
+    <li>
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Home
+      </a>
+    </li>
+    <li>
+      <a routerLink="portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+        Portfolio
+      </a>
+    </li>
   </ul>
 </nav>
 

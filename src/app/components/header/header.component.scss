@@ -10,10 +10,11 @@ header {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
-  background-color: rgba($third_color, 0.9);
-  box-shadow: 0 0 3px 0 $first_color;
-  -webkit-box-shadow: 0 0 3px 0 $first_color;
-  -moz-box-shadow: 0 0 3px 0 $first_color;
+  color: $title_dark;
+  background-color: rgba($primary_color, 0.9);
+  box-shadow: 0 0 3px 0 $primary_color;
+  -webkit-box-shadow: 0 0 3px 0 $primary_color;
+  -moz-box-shadow: 0 0 3px 0 $primary_color;
   z-index: 100;
 
   .inner-container {
@@ -49,7 +50,7 @@ header {
         }
 
         li:hover {
-          color: $forth_color;
+          color: $accent_color;
         }
       }
     }
@@ -57,11 +58,10 @@ header {
     button {
       padding: 0;
       display: none;
-      opacity: 0.9;
+      opacity: 0.75;
 
       &:hover {
         opacity: 1;
-        filter: brightness(0.5);
         transition: 0.3s;
       }
     }
@@ -73,10 +73,10 @@ header {
   top: 56px;
   width: 100%;
   padding: $gap;
-  background-color: rgba($second_color, 0.9);
-  box-shadow: 0 0 1px 0 $first_color;
-  -webkit-box-shadow: 0 0 1px 0 $first_color;
-  -moz-box-shadow: 0 0 1px 0 $first_color;
+  background-color: rgba($primary_color, 0.9);
+  box-shadow: 0 0 1px 0 $primary_color;
+  -webkit-box-shadow: 0 0 1px 0 $primary_color;
+  -moz-box-shadow: 0 0 1px 0 $primary_color;
   z-index: 90;
 
   ul {
@@ -84,17 +84,17 @@ header {
     flex-direction: column;
     gap: $gap;
     font-weight: 500;
-    color: $first_color;
+    color: $title_dark;
 
     li:hover {
-      color: $forth_color;
+      color: $accent_color;
       transition: 0.3s;
     }
   }
 }
 
 .active {
-  color: $forth_color;
+  color: $accent_color;
 }
 
 .show-mobile-menu {

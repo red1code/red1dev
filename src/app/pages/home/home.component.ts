@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NgOptimizedImage } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
 import { TabsComponent } from '../../components/tabs/tabs.component';
@@ -6,6 +6,7 @@ import { ContactFormComponent } from '../../components/contact-form/contact-form
 import { MatIconModule } from '@angular/material/icon';
 import { ClipboardModule } from '@angular/cdk/clipboard';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SeoService } from '../../services/seo.service';
 
 @Component({
   selector: 'app-home',
@@ -23,10 +24,15 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HomeComponent {
 
-  constructor(private snackBar: MatSnackBar) { }
+  seoService = inject(SeoService);
+  snackBar = inject(MatSnackBar);
+
+  constructor() {
+    this.seoService.setMetaDescription(`I'm Redouane Bekkouche, a passionate front-end web developer, crafting beautiful experiences with Angular. Explore my portfolio and let's connect!`);
+  }
 
   openSnackBar(msg: string) {
-    this.snackBar.open(msg, 'Close', { duration: 2000, });
+    this.snackBar.open(msg, '', { duration: 1000, });
   }
 
 }

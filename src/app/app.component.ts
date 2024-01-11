@@ -26,7 +26,7 @@ export class AppComponent {
 
   @HostListener("window:scroll", [])
   onWindowScroll() {
-    if (window.scrollY > window.innerHeight) {
+    if (window.scrollY > (window.innerHeight / 2)) {
       this.showGoToTopBtn = true;
     }
     else {

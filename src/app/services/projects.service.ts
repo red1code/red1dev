@@ -10,8 +10,19 @@ export class ProjectsService {
 
   websites: Project[] = [
     {
+      title: 'My Portfolio',
+      description: `It's the website you are visiting right now!`,
+      img: '/assets/mockups/my-portfolio-mockup.webp',
+      skillsImgs: [
+        '/assets/angular.svg',
+        '/assets/typescript.svg',
+      ],
+      previewHref: 'https://redouane-bekkouche-portfolio.onrender.com/',
+      sourceCodeHref: 'https://github.com/red1code/red1dev',
+    },
+    {
       title: 'Yora Pro',
-      description: 'A landing page showcase website, for a local digital agency.',
+      description: 'A brochure website, for a local digital agency.',
       img: '/assets/mockups/yora-pro-mockup.webp',
       skillsImgs: [
         '/assets/html5-original.svg',
@@ -59,6 +70,18 @@ export class ProjectsService {
       ],
       previewHref: 'https://red1code.github.io/todo-app/',
       sourceCodeHref: 'https://github.com/red1code/todo-app',
+    },
+    {
+      title: 'SCRUM Board',
+      description: `A simple SCRUM Board Angular application. I used Firebase for database and hosting`,
+      img: '/assets/mockups/backlog-mockup.webp',
+      skillsImgs: [
+        '/assets/angular.svg',
+        '/assets/typescript.svg',
+        '/assets/firebase-logo.svg',
+      ],
+      previewHref: 'https://kanban-fire-workshop-52a4f.web.app/',
+      sourceCodeHref: 'https://github.com/red1code/SCRUM-Board',
     },
     {
       title: 'Rendezvous App',

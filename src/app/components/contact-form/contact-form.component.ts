@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormsModule, NgForm } from '@angular/forms';
+import { FormsModule, NgForm, NgModel } from '@angular/forms';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
@@ -36,6 +36,10 @@ export class ContactFormComponent {
 
   async sendMessage(evt: Event) {
     const form = evt.target as HTMLFormElement;
+    if (!form.checkValidity()) {
+      this.showAlert('Invalid form', 'Error');
+      return
+    }
     try {
       const result = await emailjs.sendForm(
         'service_4w5pcnn',

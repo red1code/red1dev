@@ -1,11 +1,11 @@
-<mat-tab-group dynamicHeight color="" backgroundColor="primary">
+<mat-tab-group dynamicHeight backgroundColor="primary">
   @for (tab of tabs; track $index) {
-    <mat-tab>
-      <ng-template mat-tab-label class="tab-label">
-        {{ tab.title }}
-      </ng-template>
-      <ng-container [ngTemplateOutlet]="tab.template"></ng-container>
-    </mat-tab>
+  <mat-tab>
+    <ng-template mat-tab-label class="tab-label">
+      {{ tab.title }}
+    </ng-template>
+    <ng-container [ngTemplateOutlet]="tab.template"></ng-container>
+  </mat-tab>
   }
 </mat-tab-group>
 

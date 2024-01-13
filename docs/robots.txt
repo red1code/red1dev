@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://red1code.github.io/red1dev/

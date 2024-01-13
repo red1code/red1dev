@@ -17,6 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "baseHref": "/red1dev/",
             "outputPath": "dist/red1-portfolio",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -27,7 +28,7 @@
             "inlineStyleLanguage": "scss",
             "assets": [
               "src/assets/red1-favicon.webp",
-              "src/assets",
+              "src/assets/",
               "src/sitemap.xml",
               "src/robots.txt"
             ],

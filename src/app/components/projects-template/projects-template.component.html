@@ -1,45 +1,46 @@
 <div matTabContent>
   @if (projects) {
-    <div class="tab-container">
-      @for (project of projects; track $index) {
-        <section class="project">
-          <div class="details">
-            <h2>{{ project.title }}</h2>
-            <p class="description">{{ project.description }}</p>
-            <h4>Skills</h4>
-            <div class="skills">
-              @for (img of project.skillsImgs; track $index) {
-                <img [ngSrc]="img" width="48" height="48" alt="Skill logo">
-              }
-            </div>
-            <div class="btns">
-              <a mat-flat-button color="primary" 
-                [href]="project.previewHref" target="_blank">
-                <span class="btn-content">
-                  <img ngSrc="../../../assets/external-link-icon.svg" width="14" height="14" alt="External link icon">
-                  Preview 
-                  <img ngSrc="../../../assets/preview-icon.svg" width="16" height="16" alt="Preview icon">
-                </span>
-              </a>
-              <a mat-stroked-button
-                [href]="project.sourceCodeHref" target="_blank">
-                <span class="btn-content">
-                  <img ngSrc="../../../assets/external-link-icon.svg" width="14" height="14" alt="External link icon">
-                  Source code
-                  <img ngSrc="../../../assets/source-code-icon.svg" width="16" height="16" alt="Source-code icon">              
-                </span>
-              </a>
-            </div>
-          </div>
-        
-          <div class="photos">
-            <img [ngSrc]="project.img" fill>
-          </div>
-        </section>
-      }
-    </div>
+  <div class="tab-container">
+    @for (project of projects; track $index) {
+    <section class="project">
+      <div class="details">
+        <h2>{{ project.title }}</h2>
+        <p class="description">{{ project.description }}</p>
+        <h4>Skills</h4>
+        <div class="skills">
+          @for (img of project.skillsImgs; track $index) {
+          <img [ngSrc]="img" width="48" height="48" alt="Skill logo">
+          }
+        </div>
+        <div class="btns">
+          <a mat-flat-button color="primary" [href]="project.previewHref" target="_blank">
+            <span class="btn-content">
+              <img ngSrc="assets/external-link-icon.svg" width="14" height="14"
+                alt="External link icon">
+              Preview
+              <img ngSrc="assets/preview-icon.svg" width="16" height="16" alt="Preview icon">
+            </span>
+          </a>
+          <a mat-stroked-button [href]="project.sourceCodeHref" target="_blank">
+            <span class="btn-content">
+              <img ngSrc="assets/external-link-icon.svg" width="14" height="14"
+                alt="External link icon">
+              Source code
+              <img ngSrc="assets/source-code-icon.svg" width="16" height="16"
+                alt="Source-code icon">
+            </span>
+          </a>
+        </div>
+      </div>
+
+      <div class="photos">
+        <img [ngSrc]="project.img" fill>
+      </div>
+    </section>
+    }
+  </div>
   }
   @else {
-    <p>projects not found</p>
-  }  
+  <p>projects not found</p>
+  }
 </div>

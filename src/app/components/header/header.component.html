@@ -2,13 +2,13 @@
   <div class="inner-container">
     <div class="social-links">
       <a href="https://github.com/red1code" target="_blank">
-        <img src="../../../assets/github.svg" width="20" height="20" alt="Github icon">
+        <img src="assets/github.svg" width="20" height="20" alt="Github icon">
       </a>
       <a href="https://www.linkedin.com/in/redouane-bekkouche/" target="_blank">
-        <img src="../../../assets/LinkedIn_icon.svg" width="20" height="20" alt="LinkedIn icon">
+        <img src="assets/LinkedIn_icon.svg" width="20" height="20" alt="LinkedIn icon">
       </a>
       <a href="https://twitter.com/red1dev" target="_blank">
-        <img src="../../../assets/X-icon.svg" width="20" height="20" alt="X (Twitter) icon">
+        <img src="assets/X-icon.svg" width="20" height="20" alt="X (Twitter) icon">
       </a>
     </div>
     <nav id="desktopMenu">
@@ -19,7 +19,8 @@
           </a>
         </li>
         <li>
-          <a routerLink="portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          <a routerLink="portfolio" routerLinkActive="active"
+            [routerLinkActiveOptions]="{exact: true}">
             Portfolio
           </a>
         </li>
@@ -27,17 +28,17 @@
     </nav>
     <button type="button" id="toggleMenuBtn" (click)="showMobileMenu=!showMobileMenu">
       @if (showMobileMenu) {
-        <img src="../../../assets/close-menu.svg" width="16" height="16" alt="Close menu icon">
+      <img src="assets/close-menu.svg" width="16" height="16" alt="Close menu icon">
       }
       @else if (!showMobileMenu) {
-        <img src="../../../assets/align-justify.svg" width="20" height="20" alt="Open menu icon">
+      <img src="assets/align-justify.svg" width="20" height="20" alt="Open menu icon">
       }
     </button>
   </div>
 </header>
 
-<nav id="mobileMenu" class="hide-mobile-menu" 
-    [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
+<nav id="mobileMenu" class="hide-mobile-menu"
+  [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
   <ul>
     <li>
       <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">

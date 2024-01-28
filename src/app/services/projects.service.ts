@@ -186,7 +186,7 @@ export class ProjectsService {
         'assets/angular.svg',
         'assets/typescript.svg',
       ],
-      previewHref: 'https://redouane-bekkouche-portfolio.onrender.com/',
+      previewHref: 'https://red1code.github.io/red1dev/',
       sourceCodeHref: 'https://github.com/red1code/red1dev',
       itemImg: 'assets/project-item-imgs/red1-portfolio.webp',
       isFavorite: false,

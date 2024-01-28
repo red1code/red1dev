@@ -13,7 +13,12 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://red1code.github.io/red1dev/portfolio</loc>
+  <loc>https://red1code.github.io/red1dev/all-projects</loc>
+  <lastmod>2024-01-09T20:36:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://red1code.github.io/red1dev/project-details/:id</loc>
   <lastmod>2024-01-09T20:36:53+00:00</lastmod>
   <priority>0.80</priority>
 </url>

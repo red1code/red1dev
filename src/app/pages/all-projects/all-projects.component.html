@@ -1,0 +1,8 @@
+<div class="all-projects-container">
+  <h1>Projects</h1>
+  <div class="projects-items-container">
+    @for (project of projects; track project.id) {
+      <app-project-item [projectDetails]="project"></app-project-item>
+    }
+  </div>
+</div>

@@ -1,0 +1,39 @@
+<div class="project-detail-container">
+    <h1>{{ project?.title }}</h1>
+
+    <p>{{ project?.description }}</p>
+
+    <h4>Skills</h4>
+    <div class="skills">
+      @for (img of project?.skillsImgs; track $index) {
+      <img [ngSrc]="img" width="48" height="48" alt="Skill logo">
+      }
+    </div>
+    <div class="btns">
+      <a mat-flat-button color="primary" [href]="project?.previewHref" target="_blank"
+        title="Open link in new tab">
+        <span class="btn-content">
+          <!-- <mat-icon fontIcon="open_in_new"></mat-icon> -->
+          Preview
+          <mat-icon fontIcon="visibility"></mat-icon>
+        </span>
+      </a>
+      <a mat-stroked-button [href]="project?.sourceCodeHref" target="_blank"
+        title="Open link in new tab">
+        <span class="btn-content">
+          <!-- <mat-icon fontIcon="open_in_new"></mat-icon> -->
+          Source code
+          <mat-icon ic fontIcon="code"></mat-icon>
+        </span>
+      </a>
+    </div>
+
+    <div class="project-img">
+        <img
+            [ngSrc]="project?.mockupImg ?? ''"
+            width="900"
+            height="560"
+            [alt]="project?.title"
+        >
+    </div>
+</div>

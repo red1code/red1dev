@@ -1,0 +1,49 @@
+@import '../../theme/config';
+
+.project-detail-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: calc($gap * 2) $gap;
+  display: flex;
+  flex-direction: column;
+  gap: calc($gap * 2);
+
+  h1 {
+    text-align: center;
+  }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc($gap / 2);
+
+    img {
+      width: fit-content;
+    }
+  }
+
+  .btns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: calc($gap / 2);
+
+    .btn-content {
+      display: flex;
+      align-items: center;
+      gap: calc($gap / 4);
+      font-size: 1rem;
+    }
+  }
+
+  .project-img {
+    position: relative;
+    text-align: center;
+
+    img {
+      min-width: 75%;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+}

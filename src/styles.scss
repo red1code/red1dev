@@ -3,7 +3,11 @@
 @use '@angular/material' as mat;
 @use './app/theme/palettes' as custom;
 @use './app/theme/config' as config;
-// Plus imports for other components in your app.
+
+@font-face {
+  font-family: 'ContrailOne';
+  src: url(./assets/fonts/ContrailOne-Regular.ttf);
+}
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
@@ -86,4 +90,16 @@ li {
     color: config.$accent_color;
     transition: 0.3s;
   }
+}
+
+h1 {
+  font-family: 'ContrailOne';
+  font-size: 3rem;
+}
+
+h2 {
+  font-family: 'ContrailOne';
+  font-size: 2.3rem;
+  line-height: 0.8;
+  color: config.$title_dark;
 }

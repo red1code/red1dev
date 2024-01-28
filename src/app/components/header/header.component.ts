@@ -1,3 +1,4 @@
+import { MatButtonModule } from '@angular/material/button';
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -8,7 +9,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   standalone: true,
-  imports: [CommonModule, RouterLink, RouterLinkActive, MatIconModule]
+  imports: [CommonModule, RouterLink, RouterLinkActive, MatIconModule, MatButtonModule]
 })
 export class HeaderComponent {
 

@@ -9,8 +9,8 @@
           href="assets/Redouane-Bekkouche-CV.pdf" download>
           <mat-icon>download</mat-icon>Resume
         </a>
-        <a type="button" mat-flat-button href="#contact" id="contactBtn">
-          Contact
+        <a type="button" mat-flat-button href="#projects" id="projectstBtn">
+          Projects
         </a>
       </div>
     </div>
@@ -26,14 +26,15 @@
 
     <div class="details">
       <div class="inner">
-        <h2>About me</h2>
+        <h2>Who am I</h2>
         <p>I'm a passionate front-end web developer, I use my expertise in Angular to craft engaging
           and responsive web applications. <br>
           I honed my skills by tackling many challenges and by following
-          <a href="https://www.theodinproject.com/" target="_blank" class="link">The Odin
-            Project</a> curriculum. <br>
-          Now, I'm eagerly seeking my first developer position or internship to contribute my
-          technical savvy to innovative projects. I'm confident in my ability to learn quickly,
+          <a href="https://www.theodinproject.com/" target="_blank" class="link">
+            The Odin Project </a>
+           curriculum. <br>
+          I'm eagerly seeking new opportunities to practice and improve my skills and knowledge. I'm
+          confident in my ability to learn quickly,
           collaborate effectively, and deliver high-quality code. <br>
           Curently I'm learning back-end developement with NodeJS, and interrested in mobile
           developement. <br>
@@ -49,33 +50,48 @@
   </div>
 </section>
 
+<section id="projects">
+  <div class="inner-container">
+    <h2>What I Have Done <br> <small>Always learning. Always building</small></h2>
+    <div class="projects-container">
+      @for (project of favoriteProjects; track project.id) {
+        <app-project-item [projectDetails]="project"></app-project-item>
+      }
+    </div>
+    <a mat-raised-button color="primary" routerLink="all-projects">Show All Projects</a>
+  </div>
+</section>
+
 <section id="contact">
+  <h2>Let's Talk</h2>
   <div class="inner-container">
     <div class="details">
-      <div class="inner">
-        <h2>Let's Connect</h2>
+      <div class="inner">        
         <p>I'm currently looking for new opportunities, my inbox is always open. Whether you have a
           question or just want to say hi, I'll try my best to get back to you!</p>
         <div class="email">
-          <img ngSrc="assets/envelope.svg" width="24" height="24" class="icon" alt="">
+          <!-- <img ngSrc="assets/envelope.svg" width="24" height="24" class="icon" alt="Email icon"> -->
+          <mat-icon fontIcon="email"></mat-icon>
           <span>redouane.bekk&#64;gmail.com</span>
           <button [cdkCopyToClipboard]="'redouane.bekk@gmail.com'" type="button" class="copy-btn"
             title="Copy Email adresse" (click)="openSnackBar('Email adresse copied')">
-            <img src="assets/content_copy_icon.svg" width="24" height="24" alt="Copy text icon">
+            <!-- <img src="assets/content_copy_icon.svg" width="24" height="24" alt="Copy text icon"> -->
+            <mat-icon fontIcon="content_copy"></mat-icon>
           </button>
         </div>
         <div class="phone">
           <div class="icons">
-            <img ngSrc="assets/phone.svg" width="24" height="24" class="icon" alt="Phone icon"> |
-            <img ngSrc="assets/telegram.svg" width="24" height="24" class="icon"
-              alt="Telegram icon"> |
-            <img ngSrc="assets/whatsapp-square.svg" width="24" height="27.5" class="icon"
-              alt="WhatsApp icon">
+            <mat-icon fontIcon="phone"></mat-icon>|
+            <mat-icon fontIcon="telegram"></mat-icon>
+            <!-- <img ngSrc="assets/phone.svg" width="24" height="24" class="icon" alt="Phone icon"> | -->
+            <!-- <img ngSrc="assets/telegram.svg" width="24" height="24" class="icon" alt="Telegram icon"> | -->
+            <!-- <img ngSrc="assets/whatsapp-square.svg" width="24" height="27.5" class="icon" alt="WhatsApp icon"> -->
           </div>
           <span>+213 790 04 66 00</span>
           <button [cdkCopyToClipboard]="'+213790046600'" type="button" class="copy-btn"
             title="Copy phone number" (click)="openSnackBar('Phone number copied')">
-            <img src="assets/content_copy_icon.svg" width="24" height="24" alt="Copy text icon">
+            <!-- <img src="assets/content_copy_icon.svg" width="24" height="24" alt="Copy text icon"> -->
+            <mat-icon fontIcon="content_copy"></mat-icon>
           </button>
         </div>
       </div>
@@ -150,8 +166,10 @@
 
 <ng-template #education>
   <div class="tab-content">
-    - <b>University: </b> Farhat Abbas Setif University. Algeria. 2016 / 2017 <br>
-    - <b>Field of study:</b> Optics and Mechanics <small>(No degree)</small>
+    <div id="education">
+      <div>- <b>University: </b> Farhat Abbas Setif University <b>.</b> Algeria</div>
+      <div>- <b>Field of study:</b> Optics and Mechanics <b>.</b> 2016 / 2017</div>
+    </div>
   </div>
 </ng-template>
 

@@ -43,7 +43,8 @@ header {
       ul {
         float: right;
         display: flex;
-        gap: $gap;
+        align-items: center;
+        gap: calc($gap / 3);
 
         li {
           font-weight: 500;
@@ -69,7 +70,7 @@ header {
 }
 
 #mobileMenu {
-  position: fixed;
+  position: absolute;
   top: 56px;
   width: 100%;
   padding: $gap;

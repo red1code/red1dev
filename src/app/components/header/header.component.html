@@ -14,15 +14,16 @@
     <nav id="desktopMenu">
       <ul>
         <li>
-          <a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-            Home
-          </a>
+          <a  mat-button routerLink="">Home</a>
         </li>
         <li>
-          <a routerLink="portfolio" routerLinkActive="active"
-            [routerLinkActiveOptions]="{exact: true}">
-            Portfolio
-          </a>
+          <a  mat-button href="#about">About me</a>
+        </li>
+        <li>
+          <a  mat-button href="#projects">Projects</a>
+        </li>
+        <li>
+          <a mat-flat-button id="contactBtn" href="#contact">Contact me</a>
         </li>
       </ul>
     </nav>
@@ -35,23 +36,25 @@
       }
     </button>
   </div>
-</header>
 
-<nav id="mobileMenu" class="hide-mobile-menu"
-  [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
-  <ul>
-    <li>
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        Home
-      </a>
-    </li>
-    <li>
-      <a routerLink="portfolio" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
-        Portfolio
-      </a>
-    </li>
-  </ul>
-</nav>
+  <nav id="mobileMenu" class="hide-mobile-menu"
+    [ngClass]="{'show-mobile-menu': this.showMobileMenu, 'hide-mobile-menu': !this.showMobileMenu}">
+    <ul>
+      <li>
+        <a routerLink="">Home</a>
+      </li>
+      <li>
+        <a href="#about" routerLinkActive="active">About me</a>
+      </li>
+      <li>
+        <a href="#projects">Projects</a>
+      </li>
+      <li>
+        <a href="#contact" routerLinkActive="active">Contact me</a>
+      </li>
+    </ul>
+  </nav>
+</header>
 
 
 

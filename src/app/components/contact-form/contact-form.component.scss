@@ -4,8 +4,11 @@ form {
   padding: 24px;
   border-radius: 4px;
   width: 100%;
-  background-color: $bg_light;
+  background-color: #eee;
   color: $txt_dark;
+  box-shadow: 0 0 5px 0 rgba(#000, 0.5);
+  -webkit-box-shadow: 0 0 5px 0 rgba(#000, 0.5);
+  -moz-box-shadow: 0 0 5px 0 rgba(#000, 0.5);
 
   h3 {
     color: $title_dark;

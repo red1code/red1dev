@@ -5,12 +5,20 @@ export const routes: Routes = [
   {
     path: '',
     title: 'Redouane - Home',
-    loadComponent: () => import('./pages/home/home.component').then(mod => mod.HomeComponent)
+    loadComponent: () => import('./pages/home/home.component')
+      .then(mod => mod.HomeComponent)
   },
   {
-    path: 'portfolio',
-    title: 'Redouane - Portfolio',
-    loadComponent: () => import('./pages/portfolio/portfolio.component').then(mod => mod.PortfolioComponent)
+    path: 'all-projects',
+    title: 'Redouane - All projects',
+    loadComponent: () => import('./pages/all-projects/all-projects.component')
+      .then(mod => mod.AllProjectsComponent)
+  },
+  {
+    path: 'project-detail/:id',
+    title: 'Redouane - Project detail',
+    loadComponent: () => import('./pages/project-detail/project-detail.component')
+      .then(mod => mod.ProjectDetailComponent)
   },
   {
     path: 'home',
@@ -18,6 +26,7 @@ export const routes: Routes = [
   },
   {
     path: '**',
+    title: 'Redouane - Not found page',
     component: NotFoundComponent
   }
 ];

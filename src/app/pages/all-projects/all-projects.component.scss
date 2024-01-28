@@ -1,0 +1,20 @@
+@import '../../theme/config';
+
+.all-projects-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: calc($gap * 2) $gap;
+
+  h1 {
+    text-align: center;
+    margin-bottom: calc($gap * 2);
+  }
+
+  .projects-items-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
+    gap: $gap;
+    width: 100%;
+  }
+
+}

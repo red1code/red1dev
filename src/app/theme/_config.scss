@@ -13,3 +13,26 @@ $txt_dark: #4E4E4E;
 $label_dark: #6E6E6E;
 
 $gap: 24px;
+
+/*
+** spin animations
+*/
+
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}

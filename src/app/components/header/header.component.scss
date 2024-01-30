@@ -30,11 +30,11 @@ header {
 
       img {
         height: 100%;
-        opacity: 0.75;
 
         &:hover {
-          opacity: 1;
-          transition: 0.3s;
+          -webkit-animation: spin 0.3s linear;
+          -moz-animation: spin 0.3s linear;
+          animation: spin 0.3s linear;
         }
       }
     }

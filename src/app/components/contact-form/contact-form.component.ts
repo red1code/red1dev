@@ -47,13 +47,12 @@ export class ContactFormComponent {
         form,
         'MWi3lZpeI_M3SN67R'
       );
-      console.log(result.text);
       this.showAlert('Message sent succesfuly', 'Success');
       form.reset()
     }
     catch (error) {
       console.error(error);
-      this.showAlert(`Your message was not sent: \n ${error}`, 'Success');
+      this.showAlert(`Your message was not sent: \n ${error}`, 'Error');
     }
   }
 
